@@ -1,25 +1,29 @@
-puts "You ran this program with #{ARGV.size} arguments."
-puts ""
-
 if ARGV.size == 0
-  puts "Try running these commands to explore how command-line arguments work:"
+  puts "You didn't tell us what file to read.  Try this command:"
   puts ""
-  puts "    ruby args.rb apple"
-  puts "    ruby args.rb dog cat"
-  puts "    ruby args.rb -f how-does-this-work.txt"
-  puts "    ruby args.rb 5 4 3 2 1 blastoff"
-else
-  ARGV.each_with_index do |argument, i|
-    puts "ARGV[#{i}] is the string '#{argument}'"
-  end
+  puts "    ruby file_read.rb random_file.txt"
+  exit # This exits the program
 end
 
-puts ""
-puts "This is a demonstration of how command-line arguments work in Ruby."
-puts ""
+# If we've reached this line of code, we know the user supplied us with at least
+# one command-line argument. We'll assume it's a file for us to read.
 
-puts "Command-line arguments are an optional, space-separated list of strings"
-puts "that can be passed to *any* command-line program. They're not unique to Ruby."
+file_name = ARGV[0]  # Set the value of file_name to the first command-line argument
+file_contents = File.read(file_name) # Read the contents of the file specified by file_name
+
+puts "The contents of #{file_name} are:"
+puts "=========="
+puts file_contents
+puts "=========="
+
 puts ""
-puts "The arguments are made available to your Ruby program through the pre-defined"
-puts "array ARGV, which is an array of strings containing the command-line arguments."
+puts "The contents of #{file_name} in all upper-case are:"
+puts "=========="
+puts file_contents.upcase
+puts "=========="
+
+puts ""
+puts "The contents of #{file_name} in reverse are:"
+puts "=========="
+puts file_contents.reverse
+puts "=========="
