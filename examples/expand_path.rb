@@ -36,3 +36,15 @@ puts File.expand_path("../args.rb", __FILE__)
 puts ""
 puts "Does File.exists? return true for the absolute path of 'args.rb'?"
 puts File.exists?(File.expand_path("../args.rb", __FILE__))
+
+puts ""
+puts "The '~' represents your home directory, so File.expand_path('~/') is:"
+puts File.expand_path('~/')
+
+puts ""
+puts "A single '.' represents the current directory, so File.expand_path('.') is:"
+puts File.expand_path('.')
+
+puts ""
+puts "Two '..' represents the parent directory, so File.expand_path('..') is:"
+puts File.expand_path('..')
