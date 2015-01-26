@@ -26,16 +26,16 @@ puts "The relative path from this file to `args.rb` is:"
 puts "=> #{"./args.rb"}"
 
 puts ""
-puts "Does `File.exists?` return true for the relative path `./args.rb`?"
-puts "=> #{File.exists?("./args.rb")}"
+puts "Does `File.exist?` return true for the relative path `./args.rb`?"
+puts "=> #{File.exist?("./args.rb")}"
 
 puts ""
 puts "The absolute path to `args.rb` is:"
 puts "=> #{File.expand_path("../args.rb", __FILE__)}"
 
 puts ""
-puts "Does `File.exists?` return true for the absolute path of `args.rb`?"
-puts "=> #{File.exists?(File.expand_path("../args.rb", __FILE__))}"
+puts "Does `File.exist?` return true for the absolute path of `args.rb`?"
+puts "=> #{File.exist?(File.expand_path("../args.rb", __FILE__))}"
 
 puts ""
 puts "The tilde character '~' represents your home directory."
