@@ -15,36 +15,39 @@
 
 puts ""
 puts "The value of `__FILE__` (the name of this Ruby file) is:"
-puts __FILE__
+puts "=> #{__FILE__}"
 
 puts ""
 puts "The absolute path of this Ruby file is:"
-puts File.expand_path(__FILE__)
+puts "=> #{File.expand_path(__FILE__)}"
 
 puts ""
 puts "The relative path from this file to `args.rb` is:"
-puts "./args.rb"
+puts "=> #{"./args.rb"}"
 
 puts ""
 puts "Does `File.exists?` return true for the relative path `./args.rb`?"
-puts File.exists?("./args.rb")
+puts "=> #{File.exists?("./args.rb")}"
 
 puts ""
 puts "The absolute path to `args.rb` is:"
-puts File.expand_path("../args.rb", __FILE__)
+puts "=> #{File.expand_path("../args.rb", __FILE__)}"
 
 puts ""
 puts "Does `File.exists?` return true for the absolute path of `args.rb`?"
-puts File.exists?(File.expand_path("../args.rb", __FILE__))
+puts "=> #{File.exists?(File.expand_path("../args.rb", __FILE__))}"
 
 puts ""
-puts "The tilde character '~' represents your home directory, so `File.expand_path('~/')` is:"
-puts File.expand_path('~/')
+puts "The tilde character '~' represents your home directory."
+puts "`File.expand_path('~/')` is:"
+puts "=> #{File.expand_path('~/')}"
 
 puts ""
-puts "A single period '.' represents the current directory, so `File.expand_path('.')` is:"
-puts File.expand_path('.')
+puts "A single period '.' represents the current directory."
+puts "`File.expand_path('.')` is:"
+puts "=> #{File.expand_path('.')}"
 
 puts ""
-puts "Two periods '..' represents the parent directory, so `File.expand_path('..')` is:"
-puts File.expand_path('..')
+puts "Two periods '..' represents the parent directory."
+puts "`File.expand_path('..')` is:"
+puts "=> #{File.expand_path('..')}"
